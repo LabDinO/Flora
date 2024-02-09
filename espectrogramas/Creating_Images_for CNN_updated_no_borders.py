@@ -28,17 +28,26 @@ import math
 
 #Spectrogram Function ONLY IMAGE NO WHITE LAYOUT
 def plot_spectrogram(Y, sr, hop_length, y_axis="linear", title="Spectrogram"):
-    plt.figure(figsize=(25, 10))
+    #(400/80, 320/80), dpi=80  TESTE COM DPI PARA DELIMITAÇÃO DE PIXELS
+    dpi = 100  # You can adjust this value based on your needs
+    width, height = 224 / dpi, 224 / dpi
+    plt.figure(figsize=(width, height), dpi=dpi)
     plt.axis('off')  # Desative os eixos
     plt.margins(0, 0) #define margens pra zero
+
+    # Set the desired frequency range (Deep Convolutional Neural Networks for Detecting Dolphin Echolocation Clicks)
+    fmin = 3000  # 3kHz
+    fmax = 144000  # 144kH
     librosa.display.specshow(Y,
                              sr=sr,
                              hop_length=hop_length,
                              x_axis="time",
                              y_axis=y_axis,
-                             cmap='jet')
+                             cmap='gray',
+                             fmin=fmin,
+                             fmax=fmax)
 
-    plt.clim(-40, 20)
+    plt.clim(-60, 10) #Definido por bibliografia (Deep Convolutional Neural Networks for Detecting Dolphin Echolocation Clicks)
     plt.tight_layout()
 
 
@@ -47,6 +56,7 @@ def plot_spectrogram(Y, sr, hop_length, y_axis="linear", title="Spectrogram"):
 FRAME_SIZE = 1024 #samples
 HOP_SIZE = 512 #samples
 sr=96000
+
 
 #CREATING NEGATIVE IMAGES -> negative
 def negative_images(file,file_raw, audio_data,sample_rate):
@@ -80,7 +90,7 @@ def negative_images(file,file_raw, audio_data,sample_rate):
                     
                     # Salve a figura no formato desejado (por exemplo, PNG)
                     output_path = os.path.join(output_folder, f'chan_{x+1}_line_{i+1}_spec_{j+1}_{ch["filename"].iloc[i]}_{df["begin_time"].iloc[i]}_{df["end_time"].iloc[i]}.png')
-                    plt.savefig(output_path)
+                    plt.savefig(output_path,bbox_inches='tight', pad_inches=0)
                     plt.close()
 
 
@@ -118,7 +128,7 @@ def click_images(file,file_raw,audio_data,sample_rate):
                     output_folder = 'D:/IMAGES_CNN/train/positive'
                     # Salve a figura no formato desejado (por exemplo, PNG)
                     output_path = os.path.join(output_folder, f'chan_{x+1}_line_{i+1}_spec_{j+1}_{ch["filename"].iloc[i]}_{df["begin_time"].iloc[i]}_{df["end_time"].iloc[i]}.png')
-                    plt.savefig(output_path)
+                    plt.savefig(output_path,bbox_inches='tight', pad_inches=0)
                     plt.close()
 
 
