@@ -34,6 +34,7 @@ def plot_spectrogram(Y, sr, hop_length, y_axis="linear", title="Spectrogram"):
     plt.figure(figsize=(width, height), dpi=dpi)
     plt.axis('off')  # Desative os eixos
     plt.margins(0, 0) #define margens pra zero
+    plt.ylim(20000, 48000) #Limiiting the low frequency
 
     # Set the desired frequency range (Deep Convolutional Neural Networks for Detecting Dolphin Echolocation Clicks)
     fmin = 3000  # 3kHz
@@ -135,7 +136,7 @@ def click_images(file,file_raw,audio_data,sample_rate):
 #####################
 ###ANOTTATION FILE###
 #####################
-test_file =  pd.read_csv('C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/espectrogramas/labels_DeepVoice/annotation_train_clicks.csv')
+test_file =  pd.read_csv('C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/labels_DeepVoice/annotation_train_clicks.csv')
 
 #Lists all the audio files names with no repeat
 audio_names = test_file['filename'].unique()
