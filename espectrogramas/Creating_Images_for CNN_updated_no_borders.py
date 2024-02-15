@@ -5,7 +5,13 @@
 #  All the csv files that has the labels with the calls catalogation were taken from the GitHub of the NGO.#
 #                  It creates the spectrograms of positive calls and negative calls                        #  
 #          In this version the images has no boarders or graphic features (tiles or labels)                #
+#The image names-> Channel + Line of the channel in the df(file) + Number of the spectrogram time intervall#
 ############################################################################################################
+
+# About the labels of Deep Voice
+#If we have a positive call in a channel x+1, it does not show a positive call in the other channels
+# BUT IT DOES NOT SHOW A NEGATIVE CALL IN THE OTHER. SO WE ARE NOT CREATING SPECTROGRAMS OF THOSE CHANNELS
+
 
 
 #Packages
@@ -59,24 +65,27 @@ HOP_SIZE = 512 #samples
 sr=96000
 
 
+
 #CREATING NEGATIVE IMAGES -> negative
 def negative_images(file,file_raw, audio_data,sample_rate):
      
     for x in range (4): #Loop que vai passar por cada um dos 4 canais
         spectrogram = audio_data[x] # loc no canal do audio file
-        ch = file.loc[(file['label'] == 0)]   #Dando um loc no csv que tem as infos
+        ch = file.loc[(file['label'] == 0)]   #Dando um loc no csv que tem as infos de negativo
         #Agora vamos começar a recortar
-        df = file.loc[(file['channel'] == x +1)]
-        for i in  range (len(df)):  #indo linha por linha em um canal x onde o label é zero
+        df = ch.loc[(file['channel'] == x +1)] #Pegando cada channel ( é x+1 porque o channel 1 tem indice 0)
+        for i in  range (len(df)):  #indo linha por linha em um canal x onde o label é zero (len(df)) -> qtd linhas do canal x+1 que o label é zero
+                if df['call_length'].iloc[i] < 2: #Se esse intervalo sem cliques for menor que dois segundo, não analisa essa sessão e vai pra proxima linha
+                    i = i+1
                 t_start = df['begin_time'].iloc[i] # begin time i
                 t_stop = df['end_time'].iloc[i] # end time i
+                t_start = math.ceil(t_start)  # arredonda t_start pra cima (EVITA PEGAR O RESTO DO CLICK ANTERIOR)
                 #Agora temos que ver se o tempo entre t_start e t_stop é par
                 t = t_stop - t_start
                 n = int(t // 2)  #n é o número de espectrogramas
                 if n == 0: #Para ajeitar calls menores que 2 segundos
                     n = 1    
                 for j in range (n):
-                    t_start = math.floor(t_start) #arredonda t_start pra baixo
                     t_stop = t_start + 2  #atualiza t_stop pra pegar o espectrograma de tamanho 2 segundos
                     audio_clip = audio_data[x][int(t_start * sr):int(t_stop * sr)]
                     #Agora a gente pega e recorta os espectrogramas 
@@ -106,7 +115,8 @@ def click_images(file,file_raw,audio_data,sample_rate):
         for i in  range (len(df)):  #LOOP PASSA LINHA A LINHA DE CADA CANAL
                 t_start = df['begin_time'].iloc[i] # begin time i
                 t_stop = df['end_time'].iloc[i] # end time i
-            
+                #t_start = math.floor(t_start) 
+                t_stop = math.ceil(t_stop)#arredonda t_stop pra cima com o objetivo de fechar mais espectrogramas sem perder infos
                 #Agora temos que ver se o tempo entre t_start e t_stop é par
                 t = t_stop - t_start
                 n = int(t // 2)  #n é o número de espectrogramas
@@ -115,7 +125,6 @@ def click_images(file,file_raw,audio_data,sample_rate):
                     n = 1
 
                 for j in range (n):
-                    t_start = math.floor(t_start) #arredonda t_start pra baixo
                     t_stop = t_start + 2  #atualiza t_stop pra pegar o espectrograma de tamanho 2 segundos
                     audio_clip = audio_data[x][int(t_start * sr):int(t_stop * sr)]
                     #Agora a gente pega e recorta os espectrogramas 
@@ -152,6 +161,6 @@ for k in range (len(audio_names)):
      file = test_file.loc[(test_file['filename'] == audio_names[k])]
      file_raw = f'D:/AUDIOS/train/{audio_names[k]}.wav'
      audio_data, sample_rate = librosa.load(file_raw, sr=None, mono=False)
-     #negative_images(file, file_raw, audio_data, sample_rate)
+     negative_images(file, file_raw, audio_data, sample_rate)
      click_images(file,file_raw,audio_data,sample_rate)
 
