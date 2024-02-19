@@ -40,7 +40,7 @@ def plot_spectrogram(Y, sr, hop_length, y_axis="linear", title="Spectrogram"):
     plt.figure(figsize=(width, height), dpi=dpi)
     plt.axis('off')  # Desative os eixos
     plt.margins(0, 0) #define margens pra zero
-    plt.ylim(20000, 48000) #Limiiting the low frequency
+    plt.ylim(10000, 48000) #Limiiting the low frequency
 
     # Set the desired frequency range (Deep Convolutional Neural Networks for Detecting Dolphin Echolocation Clicks)
     fmin = 3000  # 3kHz
@@ -75,7 +75,7 @@ def negative_images(file,file_raw, audio_data,sample_rate):
         #Agora vamos começar a recortar
         df = ch.loc[(file['channel'] == x +1)] #Pegando cada channel ( é x+1 porque o channel 1 tem indice 0)
         for i in  range (len(df)):  #indo linha por linha em um canal x onde o label é zero (len(df)) -> qtd linhas do canal x+1 que o label é zero
-                if df['call_length'].iloc[i] < 2: #Se esse intervalo sem cliques for menor que dois segundo, não analisa essa sessão e vai pra proxima linha
+                if df['call_length'].iloc[i] < 2 and i != len(df) - 1: #Se esse intervalo sem cliques for menor que dois segundo e o contador i não for o último índice de df, vá para a próxima linha não analisa essa sessão e vai pra proxima linha
                     i = i+1
                 t_start = df['begin_time'].iloc[i] # begin time i
                 t_stop = df['end_time'].iloc[i] # end time i
@@ -96,12 +96,13 @@ def negative_images(file,file_raw, audio_data,sample_rate):
                     
                     t_start = t_start + 2  #vai passando pro proximo espectrograma até dar n
 
-                    output_folder = 'D:/IMAGES_CNN/train/negative'
+                    output_folder = 'D:/IMAGES_CNN/test/negative'
                     
                     # Salve a figura no formato desejado (por exemplo, PNG)
                     output_path = os.path.join(output_folder, f'chan_{x+1}_line_{i+1}_spec_{j+1}_{ch["filename"].iloc[i]}_{df["begin_time"].iloc[i]}_{df["end_time"].iloc[i]}.png')
                     plt.savefig(output_path,bbox_inches='tight', pad_inches=0)
                     plt.close()
+                    print(f"NEGATIVE -> Audio {audio_names[k]} {k}/{len(audio_names)}, Canal {x+1}/4, Linha {i}/{len(df)} , Espectrograma número {j}/{n}")
 
 
 #CREATING IMAGES OF CLICKs -> positives
@@ -135,17 +136,19 @@ def click_images(file,file_raw,audio_data,sample_rate):
                     
                     t_start = t_start + 2  #vai passando pro proximo espectrograma até dar n, porque n é a quantidade de espectrogramas que tem no intervalo anotado no csv
 
-                    output_folder = 'D:/IMAGES_CNN/train/positive'
+                    output_folder = 'D:/IMAGES_CNN/test/positive'
                     # Salve a figura no formato desejado (por exemplo, PNG)
                     output_path = os.path.join(output_folder, f'chan_{x+1}_line_{i+1}_spec_{j+1}_{ch["filename"].iloc[i]}_{df["begin_time"].iloc[i]}_{df["end_time"].iloc[i]}.png')
                     plt.savefig(output_path,bbox_inches='tight', pad_inches=0)
                     plt.close()
+                    print(f"POSITIVE -> Audio {audio_names[k]} {k}/{len(audio_names)} , Canal {x+1}/4, Linha {i}/{len(df)} , Espectrograma número {j}/{n}")
+
 
 
 #####################
 ###ANOTTATION FILE###
 #####################
-test_file =  pd.read_csv('C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/labels_DeepVoice/annotation_train_clicks.csv')
+test_file =  pd.read_csv('C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/labels_DeepVoice/annotation_test_clicks.csv')
 
 #Lists all the audio files names with no repeat
 audio_names = test_file['filename'].unique()
@@ -159,7 +162,7 @@ audio_names = test_file['filename'].unique()
 for k in range (len(audio_names)):
      #the audio file
      file = test_file.loc[(test_file['filename'] == audio_names[k])]
-     file_raw = f'D:/AUDIOS/train/{audio_names[k]}.wav'
+     file_raw = f'D:/AUDIOS/test/{audio_names[k]}.wav'
      audio_data, sample_rate = librosa.load(file_raw, sr=None, mono=False)
      negative_images(file, file_raw, audio_data, sample_rate)
      click_images(file,file_raw,audio_data,sample_rate)
