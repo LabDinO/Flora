@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.11.8",
+    "heartbeatAt": "2024-02-29T16:55:29.203914",
+    "startedAt": "2024-02-29T16:55:26.613936",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\flora\\OneDrive\\Documentos\\MESTRADO_UFSC\\rotinas\\python\\ml-class\\my_data\\test_run_conv_mydata.py",
+    "codePathLocal": "test_run_conv_mydata.py",
+    "codePath": "my_data\\test_run_conv_mydata.py",
+    "git": {
+        "remote": "https://github.com/lukas/ml-class",
+        "commit": "dee2ce909e07be184b04b29fa61822aa07567b84"
+    },
+    "email": "flora.msauerbronn@gmail.com",
+    "root": "C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/ml-class",
+    "host": "LAPTOP-7P9QQF3E",
+    "username": "flora",
+    "executable": "C:\\Users\\flora\\OneDrive\\Documentos\\MESTRADO_UFSC\\rotinas\\python\\MESTRA\\Scripts\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.0,
+        "min": 0.0,
+        "max": 1800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.0,
+            "min": 0.0,
+            "max": 1800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 237.36034774780273,
+            "used": 202.77144622802734
+        }
+    },
+    "gpu": "GeForce MX130",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "GeForce MX130",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 7.851795196533203
+    }
+}

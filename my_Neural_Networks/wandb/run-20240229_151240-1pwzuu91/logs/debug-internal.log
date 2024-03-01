@@ -1,0 +1,216 @@
+2024-02-29 15:12:40,121 INFO    StreamThr :15164 [internal.py:wandb_internal():86] W&B internal server running at pid: 15164, started at: 2024-02-29 15:12:40.119553
+2024-02-29 15:12:40,124 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: status
+2024-02-29 15:12:40,129 INFO    WriterThread:15164 [datastore.py:open_for_write():87] open: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\run-1pwzuu91.wandb
+2024-02-29 15:12:40,130 DEBUG   SenderThread:15164 [sender.py:send():382] send: header
+2024-02-29 15:12:40,474 DEBUG   SenderThread:15164 [sender.py:send():382] send: run
+2024-02-29 15:12:41,625 INFO    SenderThread:15164 [dir_watcher.py:__init__():211] watching files in: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files
+2024-02-29 15:12:41,625 INFO    SenderThread:15164 [sender.py:_start_run_threads():1136] run started: 1pwzuu91 with start time 1709230360.121063
+2024-02-29 15:12:41,647 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: check_version
+2024-02-29 15:12:41,647 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: check_version
+2024-02-29 15:12:42,235 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: run_start
+2024-02-29 15:12:42,490 DEBUG   HandlerThread:15164 [system_info.py:__init__():27] System info init
+2024-02-29 15:12:42,491 DEBUG   HandlerThread:15164 [system_info.py:__init__():42] System info init done
+2024-02-29 15:12:42,491 INFO    HandlerThread:15164 [system_monitor.py:start():194] Starting system monitor
+2024-02-29 15:12:42,491 INFO    SystemMonitor:15164 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-02-29 15:12:42,492 INFO    HandlerThread:15164 [system_monitor.py:probe():214] Collecting system info
+2024-02-29 15:12:42,501 INFO    SystemMonitor:15164 [interfaces.py:start():190] Started cpu monitoring
+2024-02-29 15:12:42,502 INFO    SystemMonitor:15164 [interfaces.py:start():190] Started disk monitoring
+2024-02-29 15:12:42,504 INFO    SystemMonitor:15164 [interfaces.py:start():190] Started gpu monitoring
+2024-02-29 15:12:42,521 INFO    SystemMonitor:15164 [interfaces.py:start():190] Started memory monitoring
+2024-02-29 15:12:42,547 INFO    SystemMonitor:15164 [interfaces.py:start():190] Started network monitoring
+2024-02-29 15:12:42,587 DEBUG   HandlerThread:15164 [system_info.py:probe():151] Probing system
+2024-02-29 15:12:42,589 DEBUG   HandlerThread:15164 [system_info.py:_probe_git():136] Probing git
+2024-02-29 15:12:42,603 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:42,604 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:43,176 DEBUG   HandlerThread:15164 [system_info.py:_probe_git():144] Probing git done
+2024-02-29 15:12:43,176 DEBUG   HandlerThread:15164 [system_info.py:probe():199] Probing system done
+2024-02-29 15:12:43,176 DEBUG   HandlerThread:15164 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.11.8', 'heartbeatAt': '2024-02-29T18:12:42.587492', 'startedAt': '2024-02-29T18:12:40.102957', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'C:\\Users\\flora\\OneDrive\\Documentos\\MESTRADO_UFSC\\rotinas\\python\\ml-class\\my_data\\mlp_mydata.py', 'codePathLocal': 'mlp_mydata.py', 'codePath': 'my_data\\mlp_mydata.py', 'git': {'remote': 'https://github.com/lukas/ml-class', 'commit': 'dee2ce909e07be184b04b29fa61822aa07567b84'}, 'email': 'flora.msauerbronn@gmail.com', 'root': 'C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/ml-class', 'host': 'LAPTOP-7P9QQF3E', 'username': 'flora', 'executable': 'C:\\Users\\flora\\OneDrive\\Documentos\\MESTRADO_UFSC\\rotinas\\python\\MESTRA\\Scripts\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1600.0, 'min': 0.0, 'max': 1800.0}, 'cpu_freq_per_core': [{'current': 1600.0, 'min': 0.0, 'max': 1800.0}], 'disk': {'/': {'total': 237.36034774780273, 'used': 206.01240158081055}}, 'gpu': 'GeForce MX130', 'gpu_count': 1, 'gpu_devices': [{'name': 'GeForce MX130', 'memory_total': 2147483648}], 'memory': {'total': 7.851795196533203}}
+2024-02-29 15:12:43,176 INFO    HandlerThread:15164 [system_monitor.py:probe():224] Finished collecting system info
+2024-02-29 15:12:43,176 INFO    HandlerThread:15164 [system_monitor.py:probe():227] Publishing system info
+2024-02-29 15:12:43,179 INFO    HandlerThread:15164 [system_monitor.py:probe():229] Finished publishing system info
+2024-02-29 15:12:43,195 DEBUG   SenderThread:15164 [sender.py:send():382] send: files
+2024-02-29 15:12:43,197 INFO    SenderThread:15164 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-02-29 15:12:43,211 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: python_packages
+2024-02-29 15:12:43,212 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: python_packages
+2024-02-29 15:12:43,213 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-29 15:12:43,215 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: stop_status
+2024-02-29 15:12:43,219 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-29 15:12:43,498 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:43,498 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:43,498 DEBUG   SenderThread:15164 [sender.py:send():382] send: config
+2024-02-29 15:12:43,499 DEBUG   SenderThread:15164 [sender.py:send():382] send: config
+2024-02-29 15:12:43,499 DEBUG   SenderThread:15164 [sender.py:send():382] send: config
+2024-02-29 15:12:43,499 DEBUG   SenderThread:15164 [sender.py:send():382] send: config
+2024-02-29 15:12:43,499 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:43,648 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\requirements.txt
+2024-02-29 15:12:43,648 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\wandb-metadata.json
+2024-02-29 15:12:44,197 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:44,709 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:44,709 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:44,736 INFO    wandb-upload_0:15164 [upload_job.py:push():131] Uploaded file C:\Users\flora\AppData\Local\Temp\tmp2g56fyaxwandb\1q4g6xj9-wandb-metadata.json
+2024-02-29 15:12:45,208 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: status_report
+2024-02-29 15:12:46,818 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:46,819 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:48,919 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:48,920 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:49,594 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:49,594 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:49,595 DEBUG   SenderThread:15164 [sender.py:send():382] send: files
+2024-02-29 15:12:49,596 INFO    SenderThread:15164 [sender.py:_save_file():1403] saving file model-best.h5 with policy live
+2024-02-29 15:12:49,597 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:49,598 DEBUG   SenderThread:15164 [sender.py:send():382] send: telemetry
+2024-02-29 15:12:49,600 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: get_summary
+2024-02-29 15:12:49,711 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\output.log
+2024-02-29 15:12:50,626 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: status_report
+2024-02-29 15:12:51,033 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:51,033 ERROR   gpu       :15164 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-02-29 15:12:51,189 DEBUG   SenderThread:15164 [sender.py:send():382] send: exit
+2024-02-29 15:12:51,189 INFO    SenderThread:15164 [sender.py:send_exit():589] handling exit code: 1
+2024-02-29 15:12:51,189 INFO    SenderThread:15164 [sender.py:send_exit():591] handling runtime: 8
+2024-02-29 15:12:51,190 INFO    SenderThread:15164 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-02-29 15:12:51,191 INFO    SenderThread:15164 [sender.py:send_exit():597] send defer
+2024-02-29 15:12:51,191 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,191 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 0
+2024-02-29 15:12:51,192 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,192 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-02-29 15:12:51,192 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 1
+2024-02-29 15:12:51,192 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,192 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 1
+2024-02-29 15:12:51,192 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,192 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-02-29 15:12:51,192 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 2
+2024-02-29 15:12:51,193 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,193 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 2
+2024-02-29 15:12:51,193 INFO    HandlerThread:15164 [system_monitor.py:finish():203] Stopping system monitor
+2024-02-29 15:12:51,193 DEBUG   SystemMonitor:15164 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-02-29 15:12:51,193 DEBUG   SystemMonitor:15164 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-02-29 15:12:51,193 INFO    HandlerThread:15164 [interfaces.py:finish():202] Joined cpu monitor
+2024-02-29 15:12:51,212 DEBUG   SystemMonitor:15164 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-02-29 15:12:51,212 INFO    HandlerThread:15164 [interfaces.py:finish():202] Joined disk monitor
+2024-02-29 15:12:51,282 ERROR   gpu       :15164 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-02-29 15:12:51,282 INFO    HandlerThread:15164 [interfaces.py:finish():202] Joined gpu monitor
+2024-02-29 15:12:51,282 INFO    HandlerThread:15164 [interfaces.py:finish():202] Joined memory monitor
+2024-02-29 15:12:51,282 INFO    HandlerThread:15164 [interfaces.py:finish():202] Joined network monitor
+2024-02-29 15:12:51,284 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,284 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-02-29 15:12:51,284 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 3
+2024-02-29 15:12:51,285 DEBUG   SenderThread:15164 [sender.py:send():382] send: stats
+2024-02-29 15:12:51,285 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,285 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 3
+2024-02-29 15:12:51,285 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,285 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-02-29 15:12:51,286 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 4
+2024-02-29 15:12:51,286 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,286 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 4
+2024-02-29 15:12:51,286 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,286 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-02-29 15:12:51,286 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 5
+2024-02-29 15:12:51,286 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,286 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 5
+2024-02-29 15:12:51,287 DEBUG   SenderThread:15164 [sender.py:send():382] send: summary
+2024-02-29 15:12:51,288 INFO    SenderThread:15164 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-02-29 15:12:51,288 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,288 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-02-29 15:12:51,288 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 6
+2024-02-29 15:12:51,289 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,289 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 6
+2024-02-29 15:12:51,289 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,289 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-02-29 15:12:51,293 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: status_report
+2024-02-29 15:12:51,515 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 7
+2024-02-29 15:12:51,515 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:51,516 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 7
+2024-02-29 15:12:51,516 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:51,516 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-02-29 15:12:51,735 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\output.log
+2024-02-29 15:12:51,735 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\config.yaml
+2024-02-29 15:12:51,736 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\wandb-summary.json
+2024-02-29 15:12:52,203 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:53,751 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\output.log
+2024-02-29 15:12:54,863 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 8
+2024-02-29 15:12:54,864 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:54,864 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:54,865 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 8
+2024-02-29 15:12:54,865 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:54,865 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-02-29 15:12:54,866 INFO    SenderThread:15164 [job_builder.py:build():296] Attempting to build job artifact
+2024-02-29 15:12:54,866 INFO    SenderThread:15164 [job_builder.py:_get_source_type():426] is repo sourced job
+2024-02-29 15:12:55,230 INFO    SenderThread:15164 [job_builder.py:build():402] adding wandb-job metadata file
+2024-02-29 15:12:55,246 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:55,323 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 9
+2024-02-29 15:12:55,323 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:55,324 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:55,324 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 9
+2024-02-29 15:12:55,325 DEBUG   SenderThread:15164 [sender.py:send():382] send: artifact
+2024-02-29 15:12:55,776 INFO    Thread-18 :15164 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\output.log
+2024-02-29 15:12:56,248 INFO    SenderThread:15164 [sender.py:send_artifact():1494] sent artifact job-https___github.com_lukas_ml-class_my_data_mlp_mydata.py - {'id': 'QXJ0aWZhY3Q6NzM1NTM4MzAw', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE0NDE3MzYxNA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzM1NTM4MzAw', 'versionIndex': 0}}}
+2024-02-29 15:12:56,248 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:56,248 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-02-29 15:12:56,248 INFO    SenderThread:15164 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-02-29 15:12:56,347 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:56,785 INFO    SenderThread:15164 [dir_watcher.py:finish():388] scan: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files
+2024-02-29 15:12:56,785 INFO    SenderThread:15164 [dir_watcher.py:finish():402] scan save: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\config.yaml config.yaml
+2024-02-29 15:12:56,786 INFO    SenderThread:15164 [dir_watcher.py:finish():402] scan save: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\output.log output.log
+2024-02-29 15:12:56,789 INFO    SenderThread:15164 [dir_watcher.py:finish():402] scan save: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\requirements.txt requirements.txt
+2024-02-29 15:12:56,793 INFO    SenderThread:15164 [dir_watcher.py:finish():402] scan save: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\wandb-metadata.json wandb-metadata.json
+2024-02-29 15:12:56,793 INFO    SenderThread:15164 [dir_watcher.py:finish():402] scan save: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\wandb-summary.json wandb-summary.json
+2024-02-29 15:12:56,796 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 10
+2024-02-29 15:12:56,797 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:56,797 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:56,797 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 10
+2024-02-29 15:12:56,800 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:56,802 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-02-29 15:12:56,802 INFO    SenderThread:15164 [file_pusher.py:finish():172] shutting down file pusher
+2024-02-29 15:12:57,240 INFO    wandb-upload_0:15164 [upload_job.py:push():131] Uploaded file C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\config.yaml
+2024-02-29 15:12:57,361 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:57,361 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:57,793 INFO    wandb-upload_2:15164 [upload_job.py:push():131] Uploaded file C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\requirements.txt
+2024-02-29 15:12:57,832 INFO    wandb-upload_1:15164 [upload_job.py:push():131] Uploaded file C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\output.log
+2024-02-29 15:12:58,375 INFO    wandb-upload_3:15164 [upload_job.py:push():131] Uploaded file C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\files\wandb-summary.json
+2024-02-29 15:12:58,377 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:58,378 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:58,580 INFO    Thread-17 (_thread_body):15164 [sender.py:transition_state():617] send defer: 11
+2024-02-29 15:12:58,581 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:58,581 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 11
+2024-02-29 15:12:58,581 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:58,581 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-02-29 15:12:58,581 INFO    SenderThread:15164 [file_pusher.py:join():178] waiting for file pusher
+2024-02-29 15:12:58,583 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 12
+2024-02-29 15:12:58,583 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:58,583 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 12
+2024-02-29 15:12:58,583 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:58,583 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-02-29 15:12:58,584 INFO    SenderThread:15164 [file_stream.py:finish():595] file stream finish called
+2024-02-29 15:12:58,761 INFO    SenderThread:15164 [file_stream.py:finish():599] file stream finish is done
+2024-02-29 15:12:58,762 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 13
+2024-02-29 15:12:58,762 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:58,762 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 13
+2024-02-29 15:12:58,762 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:58,762 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-02-29 15:12:58,764 INFO    SenderThread:15164 [sender.py:transition_state():617] send defer: 14
+2024-02-29 15:12:58,764 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: defer
+2024-02-29 15:12:58,764 DEBUG   SenderThread:15164 [sender.py:send():382] send: final
+2024-02-29 15:12:58,764 INFO    HandlerThread:15164 [handler.py:handle_request_defer():172] handle defer: 14
+2024-02-29 15:12:58,764 DEBUG   SenderThread:15164 [sender.py:send():382] send: footer
+2024-02-29 15:12:58,764 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: defer
+2024-02-29 15:12:58,764 INFO    SenderThread:15164 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-02-29 15:12:58,765 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:58,766 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-29 15:12:58,766 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: server_info
+2024-02-29 15:12:58,766 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: get_summary
+2024-02-29 15:12:58,766 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: sampled_history
+2024-02-29 15:12:58,768 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:58,768 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-29 15:12:58,768 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: poll_exit
+2024-02-29 15:12:58,769 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: server_info
+2024-02-29 15:12:58,769 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: job_info
+2024-02-29 15:12:58,946 DEBUG   SenderThread:15164 [sender.py:send_request():409] send_request: job_info
+2024-02-29 15:12:58,946 INFO    MainThread:15164 [wandb_run.py:_footer_history_summary_info():3866] rendering history
+2024-02-29 15:12:58,947 INFO    MainThread:15164 [wandb_run.py:_footer_history_summary_info():3898] rendering summary
+2024-02-29 15:12:58,947 INFO    MainThread:15164 [wandb_run.py:_footer_sync_info():3825] logging synced files
+2024-02-29 15:12:58,948 DEBUG   HandlerThread:15164 [handler.py:handle_request():146] handle_request: shutdown
+2024-02-29 15:12:58,948 INFO    HandlerThread:15164 [handler.py:finish():869] shutting down handler
+2024-02-29 15:12:59,781 INFO    WriterThread:15164 [datastore.py:close():296] close: C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_151240-1pwzuu91\run-1pwzuu91.wandb
+2024-02-29 15:12:59,951 INFO    SenderThread:15164 [sender.py:finish():1572] shutting down sender
+2024-02-29 15:12:59,951 INFO    SenderThread:15164 [file_pusher.py:finish():172] shutting down file pusher
+2024-02-29 15:12:59,951 INFO    SenderThread:15164 [file_pusher.py:join():178] waiting for file pusher

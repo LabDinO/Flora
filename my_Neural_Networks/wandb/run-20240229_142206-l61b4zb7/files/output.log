@@ -1,0 +1,8 @@
+WARNING:tensorflow:From C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+WARNING:tensorflow:From C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+Traceback (most recent call last):
+  File "C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\test_run_conv_mydata.py", line 94, in <module>
+    very_simple_model.summary()
+  File "C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\engine\training.py", line 3506, in summary
+    raise ValueError(
+ValueError: This model has not yet been built. Build the model first by calling `build()` or by calling the model on a batch of data.

@@ -1,0 +1,33 @@
+2024-02-29 14:23:07,596 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-02-29 14:23:07,596 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Configure stats pid to 14464
+2024-02-29 14:23:07,596 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Loading settings from C:\Users\flora\.config\wandb\settings
+2024-02-29 14:23:07,596 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Loading settings from C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\settings
+2024-02-29 14:23:07,596 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-02-29 14:23:07,596 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-02-29 14:23:07,598 INFO    MainThread:14464 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'my_data\\test_run_conv_mydata.py', 'program_abspath': 'C:\\Users\\flora\\OneDrive\\Documentos\\MESTRADO_UFSC\\rotinas\\python\\ml-class\\my_data\\test_run_conv_mydata.py', 'program': 'C:\\Users\\flora\\OneDrive\\Documentos\\MESTRADO_UFSC\\rotinas\\python\\ml-class\\my_data\\test_run_conv_mydata.py'}
+2024-02-29 14:23:07,598 INFO    MainThread:14464 [wandb_init.py:_log_setup():526] Logging user logs to C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_142307-yl5fnl8j\logs\debug.log
+2024-02-29 14:23:07,599 INFO    MainThread:14464 [wandb_init.py:_log_setup():527] Logging internal logs to C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_142307-yl5fnl8j\logs\debug-internal.log
+2024-02-29 14:23:07,599 INFO    MainThread:14464 [wandb_init.py:init():566] calling init triggers
+2024-02-29 14:23:07,599 INFO    MainThread:14464 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {}
+2024-02-29 14:23:07,599 INFO    MainThread:14464 [wandb_init.py:init():616] starting backend
+2024-02-29 14:23:07,599 INFO    MainThread:14464 [wandb_init.py:init():620] setting up manager
+2024-02-29 14:23:07,603 INFO    MainThread:14464 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-02-29 14:23:07,608 INFO    MainThread:14464 [wandb_init.py:init():628] backend started and connected
+2024-02-29 14:23:07,616 INFO    MainThread:14464 [wandb_init.py:init():720] updated telemetry
+2024-02-29 14:23:07,929 INFO    MainThread:14464 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-02-29 14:23:10,118 INFO    MainThread:14464 [wandb_run.py:_on_init():2262] communicating current version
+2024-02-29 14:23:10,676 INFO    MainThread:14464 [wandb_run.py:_on_init():2271] got version response 
+2024-02-29 14:23:10,676 INFO    MainThread:14464 [wandb_init.py:init():804] starting run threads in backend
+2024-02-29 14:23:11,672 INFO    MainThread:14464 [wandb_run.py:_console_start():2241] atexit reg
+2024-02-29 14:23:11,673 INFO    MainThread:14464 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-02-29 14:23:11,673 INFO    MainThread:14464 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-02-29 14:23:11,673 INFO    MainThread:14464 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-02-29 14:23:11,674 INFO    MainThread:14464 [wandb_init.py:init():847] run started, returning control to user process
+2024-02-29 14:23:11,675 INFO    MainThread:14464 [wandb_config.py:__setitem__():151] config set dense_layer_size = 25 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x00000221D13E5790>>
+2024-02-29 14:23:11,675 INFO    MainThread:14464 [wandb_run.py:_config_callback():1343] config_cb dense_layer_size 25 None
+2024-02-29 14:23:11,676 INFO    MainThread:14464 [wandb_config.py:__setitem__():151] config set epochs = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x00000221D13E5790>>
+2024-02-29 14:23:11,676 INFO    MainThread:14464 [wandb_run.py:_config_callback():1343] config_cb epochs 10 None
+2024-02-29 14:23:11,676 INFO    MainThread:14464 [wandb_config.py:__setitem__():151] config set optimizer = adam - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x00000221D13E5790>>
+2024-02-29 14:23:11,676 INFO    MainThread:14464 [wandb_run.py:_config_callback():1343] config_cb optimizer adam None
+2024-02-29 14:23:25,080 WARNING MsgRouterThr:14464 [router.py:message_loop():77] message_loop has been closed

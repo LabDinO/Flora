@@ -1,0 +1,43 @@
+WARNING:tensorflow:From C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+WARNING:tensorflow:From C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+[34m[1mwandb[39m[22m: [33mWARNING[39m The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+[34m[1mwandb[39m[22m: [33mWARNING[39m The data_type argument of wandb.keras.WandbCallback is deprecated and will be removed in a future release. Please use input_type instead.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Setting input_type = data_type.
+Epoch 1/10
+WARNING:tensorflow:From C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+WARNING:tensorflow:From C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+7/7 [==============================] - ETA: 0s - loss: 5.9979 - accuracy: 0.5524
+[34m[1mwandb[39m[22m: [33mWARNING[39m No validation_data set, pass a generator to the callback.
+C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\engine\training.py:3103: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+  saving_api.save_model(
+[34m[1mwandb[39m[22m: Adding directory to artifact (C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\ml-class\my_data\wandb\run-20240229_153250-4zhiljjx\files\model-best)... Done. 0.3s
+[34m[1mwandb[39m[22m: [33mWARNING[39m No validation_data set, pass a generator to the callback.
+C:\Users\flora\OneDrive\Documentos\MESTRADO_UFSC\rotinas\python\MESTRA\Lib\site-packages\keras\src\engine\training.py:3103: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+7/7 [==============================] - 10s 988ms/step - loss: 5.9979 - accuracy: 0.5524 - val_loss: 1.0831 - val_accuracy: 0.5000
+Epoch 2/10
+7/7 [==============================] - ETA: 0s - loss: 1.8278 - accuracy: 0.5143
+7/7 [==============================] - 5s 766ms/step - loss: 1.8278 - accuracy: 0.5143 - val_loss: 0.5698 - val_accuracy: 0.7333
+Epoch 3/10
+7/7 [==============================] - 1s 132ms/step - loss: 0.6644 - accuracy: 0.6714 - val_loss: 0.6067 - val_accuracy: 0.7667
+Epoch 4/10
+1/7 [===>..........................] - ETA: 0s - loss: 0.6516 - accuracy: 0.6250
+[34m[1mwandb[39m[22m: [33mWARNING[39m No validation_data set, pass a generator to the callback.
+7/7 [==============================] - 1s 143ms/step - loss: 0.5467 - accuracy: 0.7286 - val_loss: 0.5878 - val_accuracy: 0.7667
+Epoch 5/10
+7/7 [==============================] - 1s 143ms/step - loss: 0.5342 - accuracy: 0.7048 - val_loss: 0.7755 - val_accuracy: 0.5000
+Epoch 6/10
+1/7 [===>..........................] - ETA: 0s - loss: 0.4700 - accuracy: 0.7812
+7/7 [==============================] - 1s 171ms/step - loss: 0.4951 - accuracy: 0.7857 - val_loss: 0.7849 - val_accuracy: 0.5000
+Epoch 7/10
+7/7 [==============================] - 1s 180ms/step - loss: 0.4356 - accuracy: 0.8095 - val_loss: 0.9529 - val_accuracy: 0.5000
+Epoch 8/10
+1/7 [===>..........................] - ETA: 0s - loss: 0.4051 - accuracy: 0.8750
+[34m[1mwandb[39m[22m: [33mWARNING[39m No validation_data set, pass a generator to the callback.
+7/7 [==============================] - 1s 163ms/step - loss: 0.4408 - accuracy: 0.8000 - val_loss: 0.6343 - val_accuracy: 0.6000
+Epoch 9/10
+5/7 [====================>.........] - ETA: 0s - loss: 0.4458 - accuracy: 0.8000
+[34m[1mwandb[39m[22m: [33mWARNING[39m No validation_data set, pass a generator to the callback.
+7/7 [==============================] - 1s 157ms/step - loss: 0.4611 - accuracy: 0.7762 - val_loss: 0.5699 - val_accuracy: 0.8000
+Epoch 10/10
+7/7 [==============================] - 1s 136ms/step - loss: 0.4175 - accuracy: 0.8143 - val_loss: 0.7306 - val_accuracy: 0.5333
+[34m[1mwandb[39m[22m: [33mWARNING[39m No validation_data set, pass a generator to the callback.
