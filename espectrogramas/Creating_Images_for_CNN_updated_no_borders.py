@@ -50,7 +50,7 @@ def plot_spectrogram(Y, sr, hop_length, y_axis="linear", title="Spectrogram"):
                              hop_length=hop_length,
                              x_axis="time",
                              y_axis=y_axis,
-                             cmap='gray',
+                             cmap='jet',
                              fmin=fmin,
                              fmax=fmax)
 
@@ -96,7 +96,7 @@ def negative_images(file,file_raw, audio_data,sample_rate):
                     
                     t_start = t_start + 2  #vai passando pro proximo espectrograma até dar n
 
-                    output_folder = 'D:/IMAGES_CNN/val/negative'
+                    output_folder = 'D:/IMAGES_CNN/colorful_rainbow/test/negative'
                     
                     # Salve a figura no formato desejado (por exemplo, PNG)
                     output_path = os.path.join(output_folder, f'chan_{x+1}_line_{i+1}_spec_{j+1}_{ch["filename"].iloc[i]}_{df["begin_time"].iloc[i]}_{df["end_time"].iloc[i]}.png')
@@ -136,7 +136,7 @@ def click_images(file,file_raw,audio_data,sample_rate):
                     
                     t_start = t_start + 2  #vai passando pro proximo espectrograma até dar n, porque n é a quantidade de espectrogramas que tem no intervalo anotado no csv
 
-                    output_folder = 'D:/IMAGES_CNN/val/positive'
+                    output_folder = 'D:/IMAGES_CNN/colorful_rainbow/test/positive'
                     # Salve a figura no formato desejado (por exemplo, PNG)
                     output_path = os.path.join(output_folder, f'chan_{x+1}_line_{i+1}_spec_{j+1}_{ch["filename"].iloc[i]}_{df["begin_time"].iloc[i]}_{df["end_time"].iloc[i]}.png')
                     plt.savefig(output_path,bbox_inches='tight', pad_inches=0)
@@ -148,7 +148,7 @@ def click_images(file,file_raw,audio_data,sample_rate):
 #####################
 ###ANOTTATION FILE###
 #####################
-test_file =  pd.read_csv('C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/labels_DeepVoice/annotation_val_clicks.csv')
+test_file =  pd.read_csv('C:/Users/flora/OneDrive/Documentos/MESTRADO_UFSC/rotinas/python/labels_DeepVoice/annotation_test_clicks.csv')
 
 #Lists all the audio files names with no repeat
 audio_names = test_file['filename'].unique()
@@ -162,7 +162,7 @@ audio_names = test_file['filename'].unique()
 for k in range (len(audio_names)):
      #the audio file
      file = test_file.loc[(test_file['filename'] == audio_names[k])]
-     file_raw = f'D:/AUDIOS/val/{audio_names[k]}.wav'
+     file_raw = f'D:/AUDIOS/test/{audio_names[k]}.wav'
      audio_data, sample_rate = librosa.load(file_raw, sr=None, mono=False)
      negative_images(file, file_raw, audio_data, sample_rate)
      click_images(file,file_raw,audio_data,sample_rate)
