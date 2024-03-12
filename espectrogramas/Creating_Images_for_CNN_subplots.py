@@ -31,31 +31,44 @@ import seaborn as sns
 import csv
 import math
 
-
-#Spectrogram Function ONLY IMAGE NO WHITE LAYOUT
+#Especrograma de subplots 
 def plot_spectrogram(Y, sr, hop_length, y_axis="linear", title="Spectrogram"):
-    #(400/80, 320/80), dpi=80  TESTE COM DPI PARA DELIMITAÇÃO DE PIXELS
-    dpi = 100  # You can adjust this value based on your needs
+    # Configuração do layout
+    dpi = 100
     width, height = 224 / dpi, 224 / dpi
     plt.figure(figsize=(width, height), dpi=dpi)
-    plt.axis('off')  # Desative os eixos
-    plt.margins(0, 0) #define margens pra zero
-    plt.ylim(15000, 48000) #Limiiting the low frequency
 
-    # Set the desired frequency range (Deep Convolutional Neural Networks for Detecting Dolphin Echolocation Clicks)
-    fmin = 15000  # 3kHz
-    fmax = 48000  # 144kH
-    librosa.display.specshow(Y,
-                             sr=sr,
-                             hop_length=hop_length,
-                             x_axis="time",
-                             y_axis=y_axis,
-                             cmap='jet',
-                             fmin=fmin,
-                             fmax=fmax)
+    # Cria subplots 2x2 para cada canal
+    for i in range(Y.shape[0]):
+        plt.subplot(2, 2, i+1)
+        
+        # Configurações específicas para cada subplot
+        plt.axis('off')
+        plt.margins(0, 0)
+        plt.ylim(15000, 48000)
 
-    plt.clim(-60, 10) #Definido por bibliografia (Deep Convolutional Neural Networks for Detecting Dolphin Echolocation Clicks)
+        # Configuração do range de frequência desejado
+        fmin = 15000  # 3kHz
+        fmax = 48000  # 144kH
+
+        # Gera o espectrograma para o canal i
+        librosa.display.specshow(Y[i, :, :],
+                                 sr=sr,
+                                 hop_length=hop_length,
+                                 x_axis="time",
+                                 y_axis=y_axis,
+                                 cmap='jet',
+                                 fmin=fmin,
+                                 fmax=fmax)
+
+        # Configuração específica de clim para cada subplot
+        plt.clim(-60, 10)
+
+    # Ajuste de layout geral
     plt.tight_layout()
+    plt.subplots_adjust(wspace=0, hspace=0)
+
+    
 
 
 #Audio parameters
